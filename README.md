@@ -13,3 +13,20 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+```javascript
+import {read} from 'to-vfile'
+import {rehype} from 'rehype'
+import rehypeHighlight from 'rehype-highlight'
+
+main()
+
+async function main() {
+  const file = await rehype()
+    .data('settings', {fragment: true})
+    .use(rehypeHighlight)
+    .process(await read('example.html'))
+
+  console.log(String(file))
+}
+```
