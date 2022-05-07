@@ -14,7 +14,7 @@ node scripts/sample-script.js
 npx hardhat help
 ```
 
-```javascript
+```js
 import {read} from 'to-vfile'
 import {rehype} from 'rehype'
 import rehypeHighlight from 'rehype-highlight'
